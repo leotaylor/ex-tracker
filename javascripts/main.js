@@ -1,1 +1,3 @@
-console.log('turd sandwich');
+const initializer = require('./data');
+
+initializer();

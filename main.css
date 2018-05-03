@@ -1,3 +1,13 @@
 body{
   background-color: slategray;
 }
+
+.exCard{
+  background-color: purple;
+  max-width: 20%;
+  padding: 1%;
+}
+
+.exCard img{
+  max-width: 90%;
+}
