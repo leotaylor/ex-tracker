@@ -15,4 +15,24 @@ const writeEx = (crazyEx) => {
   return exString;
 };
 
-module.exports = writeEx;
+const writeLocal = (Locations) => {
+  let domString = '';
+  Locations.forEach((location) => {
+    domString += `<div class="locationCard col-sm-6 col-offset-3">`;
+    domString +=  `<div class="thumbnail">`;
+    domString +=    `<img src="${location.locationImage}" width="40%"`;
+    domString +=    `<div class="caption">`;
+    domString +=      `<h2>${location.Name}</h2>`;
+    domString +=      `<p>${location.locationAddress}</p>`;
+    domString +=      `<h3>${location.time}</h3>`;
+    domString +=    `</div>`;
+    domString +=   `</div>`;
+    domString +=  `</div>`;
+  });
+  return domString;
+};
+
+module.exports = {
+  writeEx,
+  writeLocal,
+};
