@@ -2,7 +2,7 @@ const writeEx = (crazyEx) => {
   let exString = '';
   exString += `<div class="container-fluid">`;
   crazyEx.forEach((ex) => {
-    exString +=  `<div class="exCard col-sm-7 col-sm-offset-5">`;
+    exString +=  `<div class="exCard col-sm-offset-5">`;
     exString +=    `<div class="caption">`;
     exString +=      `<img src="${ex.imageUrl}">`;
     exString +=      `<h2 id="thumbnail-label">${ex.Name}</h2>`;
@@ -18,7 +18,7 @@ const writeEx = (crazyEx) => {
 const writeLocal = (Locations) => {
   let domString = '';
   Locations.forEach((location) => {
-    domString += `<div class="locationCard col-sm-6 col-offset-3">`;
+    domString += `<div class="locationCard col-sm-4" id="${location.time}">`;
     domString +=  `<div class="thumbnail">`;
     domString +=    `<img src="${location.locationImage}" width="40%"`;
     domString +=    `<div class="caption">`;
