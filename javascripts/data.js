@@ -1,11 +1,12 @@
 const loadEx = require('./ex');
 const loadLocations = require('./locations');
 const print = require('./dom');
+const bindEvents = require('./events');
 
 const whenExLoads = (data) => {
   console.log('exData: ', data);
   $('.exDiv').append(print.writeEx(data.crazyEx));
-  // $('.locationsDiv').append(print.writeLocal(data.Locations));
+  bindEvents();
 };
 
 const whenExDontLoad = (error) => {

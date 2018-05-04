@@ -10,19 +10,19 @@
       "locationImage": "http://0.media.collegehumor.cvcdn.com/55/74/c14dab4147bf66263cb470d7e30a9eea.jpg",
       "Name": "Frothy Monkey",
       "locationAddress": "1 Terminal Drive, Nashville, TN 37214",
-      "time": "Morning"
+      "time": "Afternoon"
     },
     {
       "locationImage": "http://0.media.collegehumor.cvcdn.com/55/74/c14dab4147bf66263cb470d7e30a9eea.jpg",
       "Name": "Mewsic Kitty Cafe",
       "locationAddress": "1 Terminal Drive, Nashville, TN 37214",
-      "time": "Morning"
+      "time": "Evening"
     },
     {
       "locationImage": "http://0.media.collegehumor.cvcdn.com/55/74/c14dab4147bf66263cb470d7e30a9eea.jpg",
       "Name": "Nashville Zoo",
       "locationAddress": "1 Terminal Drive, Nashville, TN 37214",
-      "time": "Morning"
+      "time": "After Dark"
     },
     {
       "locationImage": "http://0.media.collegehumor.cvcdn.com/55/74/c14dab4147bf66263cb470d7e30a9eea.jpg",
@@ -34,7 +34,7 @@
       "locationImage": "http://0.media.collegehumor.cvcdn.com/55/74/c14dab4147bf66263cb470d7e30a9eea.jpg",
       "Name": "Prison",
       "locationAddress": "1 Terminal Drive, Nashville, TN 37214",
-      "time": "Morning"
+      "time": "After Dark"
     }
   ]
 }
