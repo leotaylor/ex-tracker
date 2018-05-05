@@ -20,9 +20,9 @@ const writeLocal = (Locations) => {
   Locations.forEach((location) => {
     domString += `<div class="locationCard col-sm-4" id="${location.time}">`;
     domString +=  `<div class="thumbnail">`;
-    domString +=    `<img src="${location.locationImage}" width="40%"`;
+    domString +=    `<img class="locationImage" src="${location.locationImage}" width=70% height=50%`;
     domString +=    `<div class="caption">`;
-    domString +=      `<h2>${location.Name}</h2>`;
+    domString +=      `<h2 class="actualLocation">${location.Name}</h2>`;
     domString +=      `<p>${location.locationAddress}</p>`;
     domString +=      `<h3>${location.time}</h3>`;
     domString +=    `</div>`;

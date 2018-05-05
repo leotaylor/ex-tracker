@@ -12,3 +12,12 @@ body{
 .exCard img{
   max-width: 90%;
 }
+
+.exDiv{
+  margin: 1%;
+}
+
+.locationCard{
+  height: 460px;
+  margin-top: 2%;
+}
