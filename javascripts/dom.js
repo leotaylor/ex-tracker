@@ -1,8 +1,8 @@
 const writeEx = (crazyEx) => {
   let exString = '';
-  exString += `<div class="container-fluid">`;
+  exString += `<div class=" row container-fluid">`;
   crazyEx.forEach((ex) => {
-    exString +=  `<div class="exCard col-sm-offset-5">`;
+    exString +=  `<div class="exCard col-xs-offset-5">`;
     exString +=    `<div class="caption">`;
     exString +=      `<img src="${ex.imageUrl}">`;
     exString +=      `<h2 id="thumbnail-label">${ex.Name}</h2>`;

@@ -2,6 +2,10 @@ body{
   background-color: slategray;
 }
 
+#headline{
+  color: white;
+}
+
 .exCard{
   background-color: purple;
   max-width: 20%;
@@ -21,3 +25,9 @@ body{
   height: 460px;
   margin-top: 2%;
 }
+
+.locationCard .thumbnail{
+  height: 459px;
+  padding-top: 3%;
+}
+
