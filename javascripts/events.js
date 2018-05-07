@@ -11,24 +11,23 @@ const filterButtons = (e) => {
     $('.locationsDiv .locationCard').not('#Evening').toggle();
   } else if (button === 'After Dark') {
     $('.locationsDiv .locationCard').not('#After-Dark').toggle();
-    console.log('WTF After Dark?');
   }
 };
 
 // Filter Based on Location Serach
 
-const enterKey = (e) => {
+const enterKey = () => {
   const jSearch = $('.search').val().toLowerCase();
-  if (e.which === 13) {
-    filterSearch(jSearch);
-  };
+  // if (e.which === 13) add e above if you want to user enter key{
+  filterSearch(jSearch);
+  // };
 };
 
 const filterSearch = (input) => {
-  console.log('Search: ', input);
+  // console.log('Search: ', input);
   $('.actualLocation').each((index, location) => {
     const locationString = $(location).text().toLowerCase();
-    console.log('locationString: ', locationString);
+    // console.log('locationString: ', locationString);
     if (locationString.includes(input)) {
       $(location).closest('.locationCard').toggle(true);
     } else $(location).closest('.locationCard').toggle(false);
