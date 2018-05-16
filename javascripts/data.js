@@ -1,7 +1,7 @@
 // const loadEx = require('./ex');
 // const loadLocations = require('./locations');
 const print = require('./dom');
-// const bindEvents = require('./events');
+const bindEvents = require('./events');
 
 // const whenExLoads = (data) => {
 //   $('.exDiv').append(print.writeEx(data.crazyEx));
@@ -49,6 +49,7 @@ const locationsJSON = () => {
 const printAllData = () => {
   exJSON().then((results) => {
     print.writeEx(results);
+    bindEvents();
     return locationsJSON();
   }).then((results) => {
     print.writeLocal(results);
