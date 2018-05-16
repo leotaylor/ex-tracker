@@ -20,7 +20,7 @@ const writeEx = (crazyEx) => {
 const writeLocal = (Locations) => {
   let domString = '';
   Locations.forEach((location) => {
-    domString += `<div class="locationCard col-sm-4" id="${location.time} ${location.locationId}">`;
+    domString += `<div class="locationCard col-sm-4" id="${location.time}">`;
     domString +=  `<div class="thumbnail">`;
     domString +=    `<img class="locationImage" src="${location.locationImage}" width=70% height=50%`;
     domString +=    `<div class="caption">`;
