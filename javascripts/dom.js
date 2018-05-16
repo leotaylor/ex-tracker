@@ -3,9 +3,8 @@ const locationDiv = $('.locationsDiv');
 
 const writeEx = (crazyEx) => {
   let exString = '';
-  exString += `<div class="row container-fluid">`;
   crazyEx.forEach((ex) => {
-    exString +=  `<div class="exCard col-sm-4" id="${ex.locations}">`;
+    exString +=  `<div class="exCard col-xs-4" id="${ex.locations}">`;
     exString +=    `<div class="caption">`;
     exString +=      `<img src="${ex.imageUrl}">`;
     exString +=      `<h2 id="thumbnail-label">${ex.Name}</h2>`;
@@ -13,7 +12,6 @@ const writeEx = (crazyEx) => {
     exString +=    `</div>`;
     exString +=       `<p>${ex.Flaws}</p>`;
     exString +=  `</div>`;
-    exString += `</div>`;
   });
   printToDom(exString);
   // return exString;
