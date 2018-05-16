@@ -11,23 +11,30 @@ body{
   max-width: 20%;
   padding: 1%;
   color: white;
+  margin: 1%;
+  height: 300px;
 }
 
 .exCard img{
-  max-width: 90%;
+  width: 90%;
+  height: 45%;
 }
 
 .exDiv{
-  margin: 1%;
+  padding-left: 25%;
 }
 
 .locationCard{
-  height: 460px;
+  height: 450px;
   margin-top: 2%;
 }
 
 .locationCard .thumbnail{
-  height: 459px;
+  height: 445px;
   padding-top: 3%;
+}
+
+.locationImage{
+  max-height: 60%;
 }
 
