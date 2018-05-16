@@ -1,6 +1,6 @@
 const writeEx = (crazyEx) => {
   let exString = '';
-  exString += `<div class=" row container-fluid">`;
+  exString += `<div class="row container-fluid">`;
   crazyEx.forEach((ex) => {
     exString +=  `<div class="exCard col-xs-offset-5">`;
     exString +=    `<div class="caption">`;
