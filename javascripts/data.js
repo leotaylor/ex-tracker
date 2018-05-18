@@ -1,7 +1,7 @@
 // const loadEx = require('./ex');
 // const loadLocations = require('./locations');
 const print = require('./dom');
-const bindEvents = require('./events');
+// const bindEvents = require('./events');
 
 // const whenExLoads = (data) => {
 //   $('.exDiv').append(print.writeEx(data.crazyEx));
@@ -49,7 +49,7 @@ const locationsJSON = () => {
 const printAllData = () => {
   exJSON().then((results) => {
     print.writeEx(results);
-    bindEvents();
+    // bindEvents();
     return locationsJSON();
   }).then((results) => {
     print.writeLocal(results);
@@ -58,8 +58,76 @@ const printAllData = () => {
   });
 };
 
+const singleEx = () => {
+  let ex = {};
+  return exJSON().then((exs) => {
+    ex = exs[0];
+    return locationsJSON();
+  }).then((locals) => {
+    const matching = locals.filter((local) => {
+      console.log('local', local.locationId);
+      console.log('exloc', ex.locations);
+      if (local.locationId === ex.locations) {
+        return true;
+      };
+      return false;
+    });
+    ex.favLocation = matching;
+    console.log('mathcing', matching);
+    console.log('ex,', ex);
+    return Promise.resolve(ex);
+  });
+};
+
+const singleEx1 = () => {
+  let ex = {};
+  return exJSON().then((exs) => {
+    ex = exs[1];
+    return locationsJSON();
+  }).then((locals) => {
+    const matching = locals.filter((local) => {
+      console.log('local', local.locationId);
+      console.log('exloc', ex.locations);
+      if (local.locationId === ex.locations) {
+        return true;
+      };
+      return false;
+    });
+    ex.favLocation = matching;
+    console.log('mathcing', matching);
+    console.log('ex,', ex);
+    return Promise.resolve(ex);
+  });
+};
+
+const singleEx2 = () => {
+  let ex = {};
+  return exJSON().then((exs) => {
+    ex = exs[2];
+    return locationsJSON();
+  }).then((locals) => {
+    const matching = locals.filter((local) => {
+      console.log('local', local.locationId);
+      console.log('exloc', ex.locations);
+      if (local.locationId === ex.locations) {
+        return true;
+      };
+      return false;
+    });
+    ex.favLocation = matching;
+    console.log('mathcing', matching);
+    console.log('ex,', ex);
+    return Promise.resolve(ex);
+  });
+};
+
 const initializer = () => {
   printAllData();
 };
 
-module.exports = initializer;
+module.exports = {
+  initializer,
+  singleEx,
+  singleEx1,
+  singleEx2,
+};

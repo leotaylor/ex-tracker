@@ -1,6 +1,6 @@
 const initializer = require('./data');
-// const bindEvents = require('./events');
+const bindEvents = require('./events');
 
-initializer();
+initializer.initializer();
 
-// bindEvents();
+bindEvents();

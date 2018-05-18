@@ -1,3 +1,6 @@
+const dom = require('./dom');
+const data = require('./data');
+
 // Filter Based on Button Click - Time of Day
 
 const filterButtons = (e) => {
@@ -34,10 +37,34 @@ const filterSearch = (input) => {
   });
 };
 
+// Click On Ex
+
+const clickEx = (e) => {
+  const exCard = $(e.target).closest('.exCard').prop('id');
+  if (exCard === 'Courtney') {
+    console.log('you rule');
+    data.singleEx().then((ex) => {
+      dom.newDom(ex);
+      dom.singleLocationDom(ex);
+    });
+  } else if (exCard === 'Tara') {
+    data.singleEx1().then((ex) => {
+      dom.newDom(ex);
+      dom.singleLocationDom(ex);
+    });
+  } else if (exCard === 'Kacey') {
+    data.singleEx2().then((ex) => {
+      dom.newDom(ex);
+      dom.singleLocationDom(ex);
+    });
+  };
+};
+
 // Binding
 const bindEvents = () => {
   $('.btn').on('click', filterButtons);
   $('.search').on('keyup', enterKey);
+  $('body').on('click', '.exBtn', clickEx);
 };
 
 module.exports = bindEvents;
