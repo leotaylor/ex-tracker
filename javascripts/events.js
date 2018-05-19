@@ -27,10 +27,8 @@ const enterKey = () => {
 };
 
 const filterSearch = (input) => {
-  // console.log('Search: ', input);
   $('.actualLocation').each((index, location) => {
     const locationString = $(location).text().toLowerCase();
-    // console.log('locationString: ', locationString);
     if (locationString.includes(input)) {
       $(location).closest('.locationCard').toggle(true);
     } else $(location).closest('.locationCard').toggle(false);
@@ -42,7 +40,6 @@ const filterSearch = (input) => {
 const clickEx = (e) => {
   const exCard = $(e.target).closest('.exCard').prop('id');
   if (exCard === 'Courtney') {
-    console.log('you rule');
     data.singleEx().then((ex) => {
       dom.newDom(ex);
       dom.singleLocationDom(ex);
@@ -64,7 +61,7 @@ const clickEx = (e) => {
 const bindEvents = () => {
   $('.btn').on('click', filterButtons);
   $('.search').on('keyup', enterKey);
-  $('body').on('click', '.exBtn', clickEx);
+  $('body').on('click', '.exCard', clickEx);
 };
 
 module.exports = bindEvents;

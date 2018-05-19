@@ -11,11 +11,10 @@ const writeEx = (crazyEx) => {
     exString +=      `<span class="age">${ex.Age}</span>`;
     exString +=    `</div>`;
     exString +=     `<p>${ex.Flaws}</p>`;
-    exString +=     `<button type="button" class="btn btn-danger exBtn">Click Me</button>`;
+    // exString +=     `<button type="button" class="btn btn-danger exBtn">Click Me</button>`;
     exString +=  `</div>`;
   });
   printToDom(exString);
-  // return exString;
 };
 
 const writeLocal = (Locations) => {
@@ -32,13 +31,12 @@ const writeLocal = (Locations) => {
     domString +=   `</div>`;
     domString +=  `</div>`;
   });
-  // return domString;
   printLocations(domString);
 };
 
 const newDom = (singleEx) => {
   let singleString = '';
-  singleString += `<button type="button" id="backBtn"  value="Refresh Page" onClick="window.location.reload()" class="btn btn-default" aria-label="Left Align">`;
+  singleString += `<button type="button" id="backBtn"  value="Refresh Page" onClick="window.location.reload()" class="btn btn-default" aria-label="Right Align">`;
   singleString +=   `<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>`;
   singleString += `</button>`;
   singleString +=  `<div class="exCard col-xs-4" id="${singleEx.locations}">`;
@@ -52,21 +50,20 @@ const newDom = (singleEx) => {
   replaceDomEx(singleString);
 };
 
-const singleLocationDom = (singleLocation) => {
+const singleLocationDom = (ex) => {
   let domString = '';
-  singleLocation.forEach((location, ex) => {
-    if (location.locationId === ex.locations) {
-      domString += `<div class="locationCard col-sm-4" id="${location.time}">`;
-      domString +=  `<div class="thumbnail">`;
-      domString +=    `<img class="locationImage" src="${location.locationImage}" width=70% height=50%`;
-      domString +=    `<div class="caption">`;
-      domString +=      `<h2 class="actualLocation">${location.Name}</h2>`;
-      domString +=      `<p>${location.locationAddress}</p>`;
-      domString +=      `<h3>${location.time}</h3>`;
-      domString +=    `</div>`;
-      domString +=   `</div>`;
-      domString +=  `</div>`;
-    };
+  const locationInfo = ex.locationInfo;
+  locationInfo.forEach((location) => {
+    domString += `<div class="locationCard col-sm-4" id="${location.time}">`;
+    domString +=  `<div class="thumbnail">`;
+    domString +=    `<img class="locationImage" src="${location.locationImage}" width=70% height=50%`;
+    domString +=    `<div class="caption">`;
+    domString +=      `<h2 class="actualLocation">${location.Name}</h2>`;
+    domString +=      `<p>${location.locationAddress}</p>`;
+    domString +=      `<h3>${location.time}</h3>`;
+    domString +=    `</div>`;
+    domString +=   `</div>`;
+    domString +=  `</div>`;
   });
   replaceLocalDom(domString);
 };
