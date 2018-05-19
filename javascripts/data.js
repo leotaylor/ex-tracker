@@ -1,26 +1,4 @@
-// const loadEx = require('./ex');
-// const loadLocations = require('./locations');
 const print = require('./dom');
-// const bindEvents = require('./events');
-
-// const whenExLoads = (data) => {
-//   $('.exDiv').append(print.writeEx(data.crazyEx));
-//   bindEvents();
-// };
-
-// const whenExDontLoad = (error) => {
-//   console.error('failure');
-// };
-
-// const whenLocationsLoad = (data) => {
-//   console.log('locationData: ', data);
-//   $('.locationsDiv').append(print.writeLocal(data.Locations));
-// };
-
-// const initializer = () => {
-//   loadEx(whenExLoads, whenExDontLoad);
-//   loadLocations(whenLocationsLoad, whenExDontLoad);
-// };
 
 const exJSON = () => {
   return new Promise((resolve, reject) => {
@@ -49,7 +27,6 @@ const locationsJSON = () => {
 const printAllData = () => {
   exJSON().then((results) => {
     print.writeEx(results);
-    // bindEvents();
     return locationsJSON();
   }).then((results) => {
     print.writeLocal(results);
@@ -64,17 +41,12 @@ const singleEx = () => {
     ex = exs[0];
     return locationsJSON();
   }).then((locals) => {
-    const matching = locals.filter((local) => {
-      console.log('local', local.locationId);
-      console.log('exloc', ex.locations);
-      if (local.locationId === ex.locations) {
-        return true;
-      };
-      return false;
+    let matching = [];
+    matching = locals.filter((local) => {
+      return ex.locations.includes(local.locationId);
     });
-    ex.favLocation = matching;
-    console.log('mathcing', matching);
-    console.log('ex,', ex);
+    ex.locationInfo = matching;
+    console.log(ex);
     return Promise.resolve(ex);
   });
 };
@@ -85,17 +57,11 @@ const singleEx1 = () => {
     ex = exs[1];
     return locationsJSON();
   }).then((locals) => {
-    const matching = locals.filter((local) => {
-      console.log('local', local.locationId);
-      console.log('exloc', ex.locations);
-      if (local.locationId === ex.locations) {
-        return true;
-      };
-      return false;
+    let matching = [];
+    matching = locals.filter((local) => {
+      return ex.locations.includes(local.locationId);
     });
-    ex.favLocation = matching;
-    console.log('mathcing', matching);
-    console.log('ex,', ex);
+    ex.locationInfo = matching;
     return Promise.resolve(ex);
   });
 };
@@ -106,17 +72,11 @@ const singleEx2 = () => {
     ex = exs[2];
     return locationsJSON();
   }).then((locals) => {
-    const matching = locals.filter((local) => {
-      console.log('local', local.locationId);
-      console.log('exloc', ex.locations);
-      if (local.locationId === ex.locations) {
-        return true;
-      };
-      return false;
+    let matching = [];
+    matching = locals.filter((local) => {
+      return ex.locations.includes(local.locationId);
     });
-    ex.favLocation = matching;
-    console.log('mathcing', matching);
-    console.log('ex,', ex);
+    ex.locationInfo = matching;
     return Promise.resolve(ex);
   });
 };
@@ -131,3 +91,27 @@ module.exports = {
   singleEx1,
   singleEx2,
 };
+
+// old Way
+
+// const loadEx = require('./ex');
+// const loadLocations = require('./locations');
+
+// const whenExLoads = (data) => {
+//   $('.exDiv').append(print.writeEx(data.crazyEx));
+//   bindEvents();
+// };
+
+// const whenExDontLoad = (error) => {
+//   console.error('failure');
+// };
+
+// const whenLocationsLoad = (data) => {
+//   console.log('locationData: ', data);
+//   $('.locationsDiv').append(print.writeLocal(data.Locations));
+// };
+
+// const initializer = () => {
+//   loadEx(whenExLoads, whenExDontLoad);
+//   loadLocations(whenLocationsLoad, whenExDontLoad);
+// };

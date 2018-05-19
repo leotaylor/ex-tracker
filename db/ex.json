@@ -5,21 +5,24 @@
       "Name": "Courtney",
       "Age": "28",
       "Flaws": "Actually Crazy, tried to win me back on HER wedding day.",
-      "locations": [1, 3, 5, 7, 9]
+      "locations": [1, 3, 5, 7, 9],
+      "id": 1
     },
     {
       "imageUrl": "https://media.giphy.com/media/xcAQFjBgg7QYw/giphy.gif",
       "Name": "Tara",
       "Age": "32",
       "Flaws": "Scary Stripper",
-      "locations": [2, 4, 6, 8, 5]
+      "locations": [2, 4, 6, 8, 5],
+      "id": 2
     },
     {
       "imageUrl": "https://i.pinimg.com/originals/89/ab/5c/89ab5c250b35a22f9787e7380d592220.gif",
       "Name": "Kacey",
       "Age": "30",
       "Flaws": "So many issues",
-      "locations": [1, 2, 5, 6, 9]
+      "locations": [1, 2, 5, 6, 9],
+      "id": 3
     }
   ]
 }
