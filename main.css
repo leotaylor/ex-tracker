@@ -38,3 +38,11 @@ body{
   max-height: 60%;
 }
 
+#backBtn {
+  background-color: purple;
+  height: 150px;
+  width: 150px;
+  float: left;
+  margin-top: 15px;
+}
+

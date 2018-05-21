@@ -36,7 +36,7 @@ const writeLocal = (Locations) => {
 
 const newDom = (singleEx) => {
   let singleString = '';
-  singleString += `<button type="button" id="backBtn"  value="Refresh Page" onClick="window.location.reload()" class="btn btn-default" aria-label="Right Align">`;
+  singleString += `<button type="button" id="backBtn"  value="Refresh Page" onClick="window.location.reload()" class="btn btn-default">`;
   singleString +=   `<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>`;
   singleString += `</button>`;
   singleString +=  `<div class="exCard col-xs-4" id="${singleEx.locations}">`;
