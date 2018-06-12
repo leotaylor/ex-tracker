@@ -1,6 +1,8 @@
 # ex-tracker
 # Description:
 As a user I want to avoid seeing my ex. In order to do this, I have cards with the locations the ex frequents and the times. I can filter by time of day by clicking the corresponding buttons. Or I can filter by location by typing into the search bar.
+
+[Click Here To View Hosted Site](https://ex-tracker-ef0ba.firebaseapp.com/)
 ## Screenshots:
 On Page Load:
 ![](https://raw.githubusercontent.com/leotaylor/ex-tracker/master/snaps/pic1.png)
@@ -32,6 +34,8 @@ jQuery, bootstrap, browserify, grunt, esLint, JavaScript, Promises.
 1. Install http-server via npm: `npm install http-server`
 1. Start Local Server
 1. In browser, navigate to: `localhost:8080`
+
+or [Click Here To View Hosted Site](https://ex-tracker-ef0ba.firebaseapp.com/)
 
 # Contributors
 [Leo Taylor](https://github.com/leotaylor)
