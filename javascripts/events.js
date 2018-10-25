@@ -44,7 +44,7 @@ const clickEx = (e) => {
       dom.newDom(ex);
       dom.singleLocationDom(ex);
     });
-  } else if (exCard === 'Tara') {
+  } if (exCard === 'Gertrude') {
     data.singleEx1().then((ex) => {
       dom.newDom(ex);
       dom.singleLocationDom(ex);
